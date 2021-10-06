@@ -25,6 +25,7 @@ const GlobalStyle = createGlobalStyle`
   }
   a, button {
       cursor:pointer;
+      font-family: 'Noto Sans KR', sans-serif; 
   }
   h1, h2, h3, h4, h5, h6{
    margin:0;
@@ -41,6 +42,10 @@ const GlobalStyle = createGlobalStyle`
   div,span, p{
     margin: 0;
     padding: 0;
+  }
+
+  .sr-only {
+    display: none;
   }
   
 `;
