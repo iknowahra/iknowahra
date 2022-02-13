@@ -1,5 +1,6 @@
-import { createGlobalStyle } from 'styled-components';
-import reset from 'styled-reset';
+import { createGlobalStyle } from "styled-components";
+import reset from "styled-reset";
+import "./index.css";
 
 const GlobalStyle = createGlobalStyle`
   ${reset}
@@ -8,10 +9,15 @@ const GlobalStyle = createGlobalStyle`
   }
   body{
     background-color: #ffffff;
-    font-family: 'Noto Sans KR', sans-serif; 
+    font-family: 'Roboto Slab', serif;
+    font-weight: 300;
     line-height: 1.3;
     margin:0;
     padding:0;
+    width: 100vw;
+    height: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
   }
 
   a {
