@@ -1,19 +1,15 @@
-import styled from 'styled-components';
-import logo from '../assets/logo_gray.png';
+import styled from "styled-components";
+import Logo from "./Logo";
 
 const Wrap = styled.div`
   width: 100vw;
   height: 7vh;
-  border: 1px solid white;
-  position: absolute;
+  position: fixed;
   margin: 0;
   padding: 0;
   z-index: 10;
-
-  img {
-    width: 3.5rem;
-    height: auto;
-  }
+  background-color: black;
+  box-shadow: 2px 1px 10px 1px rgba(0, 0, 0, 0.05);
 `;
 
 const Container = styled.div`
@@ -27,24 +23,22 @@ const Container = styled.div`
 
 const Tabs = styled.div`
   a {
-    color: ${({ theme }) => theme.colors.gray4};
+    color: ${({ theme }) => theme.colors.gray5};
     font-size: ${({ theme }) => theme.fonts.size.xsm};
-    font-weight: 500;
+    font-weight: ${({ theme }) => theme.fonts.weight.light};
     margin-left: 1rem;
   }
 
   a:hover {
-    color: ${({ theme }) => theme.colors.gray5};
+    color: ${({ theme }) => theme.colors.lightPink};
   }
 `;
 
-function Intro() {
+function Header() {
   return (
     <Wrap>
       <Container>
-        <a href="#">
-          <img src={logo} alt="logo" />
-        </a>
+        <Logo />
         <Tabs>
           <a href="#">About</a>
           <a href="#">Portfolio</a>
@@ -57,4 +51,4 @@ function Intro() {
   );
 }
 
-export default Intro;
+export default Header;
