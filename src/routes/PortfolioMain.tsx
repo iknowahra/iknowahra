@@ -5,17 +5,24 @@ import Logo from "../components/Logo";
 
 const Wrap = styled.div`
   width: 100vw;
-  height: 100vh;
+  height: 120vh;
   padding: 8vh 0 0 0;
 `;
 
 const Container = styled.div`
+  position: relative;
   width: 80%;
   height: 90%;
   margin: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
+`;
+
+const MyFrame = styled.iframe`
+  position: absolute;
+  bottom: 4rem;
+  right: -2rem;
 `;
 
 const MockupLaptop = styled.div`
@@ -39,8 +46,12 @@ const MockupLaptop = styled.div`
 
   > span {
     position: absolute;
-    bottom: 75px;
+    bottom: 95px;
     left: 450px;
+  }
+  &:hover ${MyFrame} {
+    display: none;
+    transition: all 0.5s ease-out;
   }
 `;
 
@@ -65,6 +76,7 @@ const DemoAfter = styled.div`
   opacity: 0;
   padding: 10% 13%;
   overflow: hidden;
+  transition: all 0.5s ease-out;
 
   &:hover {
     background-color: black;
@@ -99,6 +111,10 @@ const DemoAfter = styled.div`
     left: 60px;
     z-index: 1;
     animation: ${slideOutBlue} 1s linear forwards;
+  }
+
+  &:hover ${MyFrame} {
+    display: none;
   }
 `;
 const DemoTitle = styled.div`
@@ -141,6 +157,7 @@ function PortfolioMain() {
               </div>
             </DemoAfter>
             <Logo size="16px" />
+            <MyFrame src="https://embed.lottiefiles.com/animation/80666"></MyFrame>
           </MockupLaptop>
         </Container>
       </Wrap>

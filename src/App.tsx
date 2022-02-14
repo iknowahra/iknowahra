@@ -1,4 +1,5 @@
 import Header from "./components/Header";
+import PortfolioOther from "./routes/PortfolioOther";
 import PortfolioMain from "./routes/PortfolioMain";
 
 function App() {
@@ -6,6 +7,7 @@ function App() {
     <div className="App">
       <Header />
       <PortfolioMain />
+      <PortfolioOther />
     </div>
   );
 }
