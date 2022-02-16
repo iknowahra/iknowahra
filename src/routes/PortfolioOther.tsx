@@ -3,10 +3,12 @@ import comDemo from "../assets/comDemo.gif";
 import kakaoDemo from "../assets/kakaoDemo.gif";
 import musicDemo from "../assets/musicDemo.gif";
 import Card from "../components/Card";
+import Title from "../components/Title";
 
 const Wrap = styled.div`
   width: 100vw;
   height: 100vh;
+  padding: 1rem;
   background-color: ${({ theme }) => theme.colors.gray6};
 `;
 
@@ -14,8 +16,14 @@ const Container = styled.div`
   width: 80%;
   height: 100%;
   margin: auto;
+`;
+
+const CardContainer = styled.div`
   display: flex;
+  width: 100%;
+  height: calc(100% - 6rem);
   justify-content: space-evenly;
+  align-items: center;
 `;
 
 function PortfolioOther() {
@@ -41,9 +49,12 @@ function PortfolioOther() {
     <div className="PortfolioOther">
       <Wrap>
         <Container>
-          {data.map((info, idx) => (
-            <Card key={idx} info={info} />
-          ))}
+          <Title title="Other Side Projects" />
+          <CardContainer>
+            {data.map((info, idx) => (
+              <Card key={idx} info={info} />
+            ))}
+          </CardContainer>
         </Container>
       </Wrap>
     </div>

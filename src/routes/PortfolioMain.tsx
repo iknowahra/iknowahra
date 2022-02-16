@@ -2,6 +2,7 @@ import styled, { keyframes } from "styled-components";
 import laptopMockup from "../assets/laptopMockup.png";
 import webDemo from "../assets/instaWeb.gif";
 import Logo from "../components/Logo";
+import Title from "../components/Title";
 
 const Wrap = styled.div`
   width: 100vw;
@@ -121,13 +122,6 @@ const DemoTitle = styled.div`
   font-size: ${({ theme }) => theme.fonts.size.sm};
   font-weight: ${({ theme }) => theme.fonts.weight.regular};
   margin-bottom: 1rem;
-
-  ::after {
-    content: "ddd";
-    color: yellow;
-    background-size: 100%;
-    background-image: linear-gradient(transparent 60%, #f8cd07 40%);
-  }
 `;
 const DemoDetail = styled.p`
   line-height: 1.8rem;
@@ -141,6 +135,7 @@ function PortfolioMain() {
     <div id="PortfolioMain">
       <Wrap>
         <Container>
+          <Title title="Side Project" />
           <MockupLaptop>
             <img src={laptopMockup} alt="laptop mock up" />
             <img src={webDemo} alt="insta web clone demo" />
