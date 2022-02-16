@@ -9,7 +9,7 @@ const fonts = {
     base: "1.6rem",
     lg: "2rem",
     xl: "2.5rem",
-    title: "4rem",
+    title: "3rem",
   },
   weight: {
     lighter: 200,
